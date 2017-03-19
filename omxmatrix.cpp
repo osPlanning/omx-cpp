@@ -15,7 +15,7 @@
 using namespace std;
 
 // ###########################################################################
-// OMXMatrix:  C++ Helper class to read/write TP+ style matrix tables
+// OMXMatrix:  C++ Helper class to read/write TP+ (Cube) style matrix tables
 // ---------------------------------------------------------------------------
 
 OMXMatrix::OMXMatrix() {
@@ -337,7 +337,7 @@ void OMXMatrix::init_tables (vector<string> &tableNames) {
     rtn = H5Pset_deflate(plist, 7);
     rtn = H5Pset_fill_value(plist, H5T_NATIVE_DOUBLE, &fillvalue);
 
-    // Loop on all TP+ tables
+    // Loop on all tables
     for (unsigned int t=0; t<tableNames.size(); t++) {
         string tpath = "/data/" + tableNames[t];
         string tname(tableNames[t]);

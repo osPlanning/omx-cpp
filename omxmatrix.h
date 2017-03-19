@@ -41,7 +41,7 @@ public:
     int      getCols();
     int      getTables();
     void     getRow(string table, int row, void *rowptr);  // throws InvalidOperationException, MatrixReadException
-	void     getCol(string table, int col, void *colptr);  // throws InvalidOperationException, MatrixReadException
+    void     getCol(string table, int col, void *colptr);  // throws InvalidOperationException, MatrixReadException
     string   getTableName(int table);
 
     //Write/Create operations
